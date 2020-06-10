@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity4">
+
+    <TextView
+        android:id="@+id/sign_hofORintroducer"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/textsize"
+        android:text="@string/sign_of_introducer_or_hof"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/imageView_introducerorhof_name"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/sign_verifier"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rectangle_drawable" />
+
+    <TextView
+        android:id="@+id/Note_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_2"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/sign_hofORintroducer"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/discloser"
+        />
+
+
+    <TextView
+        android:id="@+id/sign_applicant"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/Note_sign"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/applicant_signature"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/imageView_sign_applicant"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/sign_applicant"
+        android:layout_below="@id/Note_sign"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/sign_verifier"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/sign_applicant"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/verifier_signature"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_sign_verifier"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/imageView_sign_applicant"
+        android:layout_toRightOf="@id/sign_verifier"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/rectangle_drawable" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_btn"
+        android:layout_below="@id/sign_verifier"
+        android:layout_marginTop="60dp"
+        android:background="@color/darkgreen"
+        />
+
+</RelativeLayout>
+
+

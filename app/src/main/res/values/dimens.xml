@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">20dp</dimen>
+    <dimen name="textsize">15sp</dimen>
+    <dimen name="drawableWidth">190dp</dimen>
+    <dimen name="drawableHeight">40dp</dimen>
+    <dimen name="leftmargin">5dp</dimen>
+    <dimen name="leftmargin_edt">10dp</dimen>
+    <dimen name="leftmargin_2">10sp</dimen>
+    <dimen name="textsize_2">10sp</dimen>
+    <dimen name="textsize_btn">20dp</dimen>
+
+</resources>

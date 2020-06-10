@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<RelativeLayout
+    android:id="@+id/rel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/poa"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/leftmargin_2"
+        android:text="@string/poa"
+        />
+
+    <EditText
+        android:id="@+id/EditText_poa"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/poa"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/poi"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/poa"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="@dimen/leftmargin_2"
+        android:text="@string/poi"
+        />
+
+    <EditText
+        android:id="@+id/EditText_poi"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_poa"
+        android:layout_toRightOf="@id/poi"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/poi"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="@dimen/leftmargin_2"
+        android:text="@string/dob"
+        />
+
+    <EditText
+        android:id="@+id/EditText_dob"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_poi"
+        android:layout_toRightOf="@id/dob"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/note_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/dob"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/mandatory"
+        />
+
+
+    <TextView
+        android:id="@+id/por"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/note_dob"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/leftmargin_2"
+        android:text="@string/por"
+        />
+
+    <EditText
+        android:id="@+id/EditText_por"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/note_dob"
+        android:layout_toRightOf="@id/poa"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+
+    <TextView
+        android:id="@+id/introducerBased"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/por"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin_2"
+        android:text="@string/for_introducer_based"
+        />
+
+    <TextView
+        android:id="@+id/Note_introBased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/introducerBased"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin_2"
+        android:text="(Introducers Aadhar Number)"
+        />
+
+    <EditText
+        android:id="@+id/EditText_introducerBased"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/introducerBased"
+        android:layout_below="@id/EditText_por"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/hofBased"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/Note_introBased"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/for_hof_based"
+        />
+
+    <TextView
+        android:id="@+id/Note_hofBased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:layout_below="@id/hofBased"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"
+        android:text="(Details Of)"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hofBased"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/leftmargin"
+        >
+
+        <RadioButton
+            android:id="@+id/Radio_father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/father"
+            android:textColor="@color/black"
+            />
+
+        <RadioButton
+            android:id="@+id/Radio_mother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/mother"/>
+
+        <RadioButton
+            android:id="@+id/radio_wife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/wife"
+            />
+
+        <RadioButton
+            android:id="@+id/Radio_husband"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/husband"
+            android:textColor="@color/black"
+            />
+
+        <RadioButton
+            android:id="@+id/Radio_guardian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Guardian"/>
+
+
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/hof_adharNumber"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/hofBased"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/hof_aadhar_eid_no"
+        />
+
+
+
+    <EditText
+        android:id="@+id/EditText_hofbasedaadharnumber"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/hof_adharNumber"
+        android:layout_below="@id/radio_group5"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/introducerORhof_name"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/hof_adharNumber"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/introducer_hof_name"
+        />
+
+
+
+    <EditText
+        android:id="@+id/EditText_introducerORhof_name"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/introducerORhof_name"
+        android:layout_below="@id/EditText_hofbasedaadharnumber"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/sign_hofORintroducer"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/introducerORhof_name"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/textsize"
+        android:text="@string/sign_of_introducer_or_hof"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/imageView_introducerorhof_name"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_introducerORhof_name"
+        android:layout_toRightOf="@id/sign_verifier"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rectangle_drawable" />
+
+    <TextView
+        android:id="@+id/Note_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_2"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/sign_hofORintroducer"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/discloser"
+        />
+
+
+    <TextView
+        android:id="@+id/sign_applicant"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/Note_sign"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/applicant_signature"
+        />
+
+
+
+    <EditText
+        android:id="@+id/EditText_sign_applicant"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/sign_applicant"
+        android:layout_below="@id/Note_sign"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/sign_verifier"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/sign_applicant"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/verifier_signature"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_sign_verifier"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_sign_applicant"
+        android:layout_toRightOf="@id/sign_verifier"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rectangle_drawable" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_btn"
+        android:layout_below="@id/sign_verifier"
+        android:layout_marginTop="60dp"
+        android:background="@color/darkgreen"
+        />
+
+</RelativeLayout>
+</ScrollView>
+

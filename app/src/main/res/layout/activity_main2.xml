@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+<RelativeLayout
+    android:id="@+id/Rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/postOffice"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/post_office"
+        />
+
+    <EditText
+        android:id="@+id/EditText_postOffice"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_toRightOf="@id/postOffice"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/district"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/postOffice"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/district"
+        />
+
+    <EditText
+        android:id="@+id/EditText_district"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_postOffice"
+        android:layout_toRightOf="@id/district"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+
+    <TextView
+        android:id="@+id/subdistrict"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/district"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/subdistrict"
+        />
+
+    <EditText
+        android:id="@+id/EditText_subdistrict"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_district"
+        android:layout_toRightOf="@id/subdistrict"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/subdistrict"
+        android:layout_marginTop="39dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/state"
+        />
+
+    <EditText
+        android:id="@+id/EditText_state"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_subdistrict"
+        android:layout_toRightOf="@id/subdistrict"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/state"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/email"
+        />
+
+    <EditText
+        android:id="@+id/EditText_email"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_state"
+        android:layout_toRightOf="@id/email"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/email"
+        android:layout_marginTop="39dp"
+        android:inputType="number"
+        android:maxLength="10"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/mobile_no"
+        />
+
+    <EditText
+        android:id="@+id/EditText_mobileno"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_email"
+        android:layout_toRightOf="@id/mobile"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/pincode"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/mobile"
+        android:layout_marginTop="39dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/pincode"
+        />
+
+    <EditText
+        android:id="@+id/EditText_pincode"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/EditText_mobileno"
+        android:layout_toRightOf="@id/pincode"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/pincode"
+        android:layout_marginTop="39dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/details_of"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/leftmargin"
+        >
+
+        <RadioButton
+            android:id="@+id/Radio_father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/father"
+            android:textColor="@color/black"
+            />
+
+        <RadioButton
+            android:id="@+id/Radio_mother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/mother"/>
+
+        <RadioButton
+            android:id="@+id/radio_wife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/wife"
+            />
+
+        <RadioButton
+            android:id="@+id/Radio_husband"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/husband"
+            android:textColor="@color/black"
+            />
+
+        <RadioButton
+            android:id="@+id/Radio_guardian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/guardian"/>
+
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/Note_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/radio_group3"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/note_deatils"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/Note_detail"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/name"
+        />
+
+    <EditText
+        android:id="@+id/EditText_name"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/Note_detail"
+        android:layout_toRightOf="@id/name"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+    <TextView
+        android:id="@+id/eid"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/name"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/eid_aadhar_no"
+        />
+
+    <EditText
+        android:id="@+id/EditText_eid"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/eid"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+
+    <TextView
+        android:id="@+id/note_eid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/eid"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/verification_type"
+        />
+
+    <TextView
+        android:id="@+id/Docbased"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/note_eid"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/leftmargin"
+        android:text="@string/for_document_based"
+        />
+
+    <EditText
+        android:id="@+id/EditText_docBased"
+        android:layout_width="@dimen/drawableWidth"
+        android:layout_height="@dimen/drawableHeight"
+        android:layout_below="@id/note_eid"
+        android:layout_toRightOf="@id/Docbased"
+        android:layout_marginLeft="@dimen/leftmargin_edt"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_drawable"
+        />
+
+
+</RelativeLayout>
+
+
+</ScrollView>
+
