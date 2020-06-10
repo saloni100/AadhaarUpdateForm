@@ -37,7 +37,7 @@ public class SecondActivity extends AppCompatActivity {
         detailsof_aadhaarno = findViewById(R.id.AadhaarNo);
 
         //collect our intent
-        Intent intent = getIntent();
+          Intent intent = getIntent();
         aadharData data = intent.getParcelableExtra("Deta");
         Toast.makeText(this,data.getFull_name(),Toast.LENGTH_LONG).show();
 
