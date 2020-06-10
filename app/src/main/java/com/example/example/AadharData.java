@@ -3,13 +3,13 @@ package com.example.example;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class aadharData implements Parcelable {
+public class AadharData implements Parcelable {
 
     String PreEnroll_id ,Full_name  , postOffice , Address , district , subdistrict , state , email , poa;
       String  poi,por,uid , age,pincode,mobile_no , aadhaar_num , hof_aadharno , introducer_name;
 
 
-    protected aadharData(Parcel in) {
+    protected AadharData(Parcel in) {
         PreEnroll_id = in.readString();
         Full_name = in.readString();
 
@@ -31,7 +31,7 @@ public class aadharData implements Parcelable {
         introducer_name = in.readString();
     }
 
-    public aadharData(String preEnroll_id, String full_name,String postOffice, String address, String district, String subdistrict, String state, String email,  String poa, String poi, String por, String uid, String age, String pincode, String mobile_no, String aadhaar_num, String hof_aadharno, String introducer_name) {
+    public AadharData(String preEnroll_id, String full_name, String postOffice, String address, String district, String subdistrict, String state, String email, String poa, String poi, String por, String uid, String age, String pincode, String mobile_no, String aadhaar_num, String hof_aadharno, String introducer_name) {
         PreEnroll_id = preEnroll_id;
         Full_name = full_name;
 
@@ -82,15 +82,15 @@ public class aadharData implements Parcelable {
         return 0;
     }
 
-    public static final Creator<aadharData> CREATOR = new Creator<aadharData>() {
+    public static final Creator<AadharData> CREATOR = new Creator<AadharData>() {
         @Override
-        public aadharData createFromParcel(Parcel in) {
-            return new aadharData(in);
+        public AadharData createFromParcel(Parcel in) {
+            return new AadharData(in);
         }
 
         @Override
-        public aadharData[] newArray(int size) {
-            return new aadharData[size];
+        public AadharData[] newArray(int size) {
+            return new AadharData[size];
         }
     };
 
@@ -241,7 +241,7 @@ public class aadharData implements Parcelable {
         this.introducer_name = introducer_name;
     }
 
-    public static Creator<aadharData> getCREATOR() {
+    public static Creator<AadharData> getCREATOR() {
         return CREATOR;
     }
 }

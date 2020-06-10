@@ -38,8 +38,8 @@ public class SecondActivity extends AppCompatActivity {
 
         //collect our intent
           Intent intent = getIntent();
-        aadharData data = intent.getParcelableExtra("Deta");
-        Toast.makeText(this,data.getFull_name(),Toast.LENGTH_LONG).show();
+        AadharData data = intent.getParcelableExtra("Deta");
+         Toast.makeText(this,data.getFull_name(),Toast.LENGTH_LONG).show();
 
 
         String PreEnroll_id  = data.getPreEnroll_id();

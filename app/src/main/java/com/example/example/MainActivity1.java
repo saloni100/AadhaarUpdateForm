@@ -139,7 +139,7 @@ public class MainActivity1 extends AppCompatActivity {
                 if(address.length()==0)
                     edt_address.setError("Address is required");
 
-                aadharData data = new aadharData(edt_preEnrollid.getText().toString(),edt_fullname.getText().toString(),edt_postoffice.getText().toString(),
+                AadharData data = new AadharData(edt_preEnrollid.getText().toString(),edt_fullname.getText().toString(),edt_postoffice.getText().toString(),
                                                  address , edt_district.getText().toString(), edt_subdistrict.getText().toString() ,
                                                  edt_state.getText().toString() , edt_email.getText().toString() , edt_poa.getText().toString(),
                         edt_poi.getText().toString(), edt_por.getText().toString() , edt_uid.getText().toString() , edt_age.getText().toString(),
