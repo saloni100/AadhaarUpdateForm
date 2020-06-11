@@ -157,8 +157,8 @@ public class MainActivity1 extends AppCompatActivity {
                           edt_landmark.getText().toString() + " " + edt_area.getText().toString() + " " + edt_village.getText().toString();
 
         //converting imageview to bitmap
-        BitmapDrawable drawable = (BitmapDrawable) img.getDrawable();
-        bitmapImg = drawable.getBitmap();
+//        BitmapDrawable drawable = (BitmapDrawable) img.getDrawable();
+//        bitmapImg = drawable.getBitmap();
 
 
        /* int selectedId = radiogroup_gender.getCheckedRadioButtonId();
