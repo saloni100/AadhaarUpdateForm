@@ -303,6 +303,7 @@
         android:layout_marginLeft="@dimen/leftmargin_edt"
         android:layout_marginTop="15dp"
         android:background="@drawable/rectangle_drawable"
+
         />
 
     <RadioGroup

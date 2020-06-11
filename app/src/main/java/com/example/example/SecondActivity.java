@@ -42,7 +42,7 @@ public class SecondActivity extends AppCompatActivity {
         //collect our intent
           Intent intent = getIntent();
         AadharData data = intent.getParcelableExtra("Deta");
-         Toast.makeText(this,data.getFull_name(),Toast.LENGTH_LONG).show();
+//         Toast.makeText(this,data.getFull_name(),Toast.LENGTH_LONG).show();
           img.setImageBitmap(data.getBitmapImage());
 
 
@@ -54,16 +54,24 @@ public class SecondActivity extends AppCompatActivity {
         String district = data.getDistrict();
         String subdistrict = data.getSubdistrict();
         String state = data.getState();
-        String email = data.getEmail();
+        String Email = data.getEmail();
         String poa = data.getPoa();
         String  poi = data.getPoi();
         String por = data.getPor();
         String uid  = data.getUid();
         String age = data.getAge();
-        String pincode = data.getPincode();
+        String Pincode = data.getPincode();
         String mobile_no  = data.getMobile_no();
         String aadhaar_num  = data.getAadhaar_num();
         String hof_aadharno = data.getHof_aadharno();
+
+        preEnrollId.setText("Pre Enroll ID : "+PreEnroll_id);
+        fullname.setText("Full name : "+Full_name);
+        email.setText("Email : "+Email);
+        mobileno.setText("Mobile number : "+mobile_no);
+        address.setText("Address : "+Address);
+        pincode.setText("Pincode : "+Pincode);
+
 
 
 
