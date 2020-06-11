@@ -57,5 +57,6 @@
     <string name="applicant_signature">Applicant Signature</string>
     <string name="verifier_signature">Verifier Signature</string>
     <string name="submit">SUBMIT</string>
+    <string name="error_mobile">Mobile Number is invalid</string>
 
 </resources>
