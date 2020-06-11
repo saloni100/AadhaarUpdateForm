@@ -1,12 +1,15 @@
 package com.example.example;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
+
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -35,15 +38,15 @@ public class MainActivity1 extends AppCompatActivity {
     private EditText edt_uid , edt_preEnrollid , edt_housenumber , edt_street , edt_landmark ,edt_state ,edt_area , edt_village ,edt_postoffice , edt_introducerName;
     private EditText edt_district , edt_subdistrict , edt_poi , edt_poa , edt_por , edt_dobdocbased , edt_age ,edt_pincode , edt_hofaadharnum;
     Button submitbtn;
-    RadioGroup radiogroup_gender;
-    RadioButton radiobtn;
-    ImageView img;
+    private RadioGroup radiogroup_gender;
+    private RadioButton radiobtn;
     Bitmap bitmapImg;
 
     TextView  tv_sign_verifier;
     TextView  tv_sign_applicant;
     private ImageView imageView_applicant;
     Bitmap photo;
+    Drawable drawable;
 
 
     private static int RESULT_LOAD_IMAGE = 1;
@@ -81,12 +84,19 @@ public class MainActivity1 extends AppCompatActivity {
         edt_hofaadharnum = findViewById(R.id.EditText_hofbasedaadharnumber);
         edt_introducerName = findViewById(R.id.EditText_introducerORhof_name);
 
+        edt_fullname = findViewById(R.id.EditText_fullname);
+        edt_aadhaarno = findViewById(R.id.EditText_hofbasedaadharnumber);
+        edt_address = findViewById(R.id.EditText_address);
+        edt_mobileno = findViewById(R.id.EditText_mobileno);
+        edt_email = findViewById(R.id.EditText_email);
+        submitbtn = findViewById(R.id.submit);
+        radiogroup_gender = findViewById(R.id.radio_group_gender);
+
+
         tv_sign_verifier = findViewById(R.id.sign_verifier);
         tv_sign_applicant = findViewById(R.id.sign_applicant);
         imageView_applicant = (ImageView)this.findViewById(R.id.imageView_sign_applicant);
 
-
-        img = (ImageView)findViewById(R.id.imageView_sign_applicant);
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -145,28 +155,27 @@ public class MainActivity1 extends AppCompatActivity {
           }
       });
 
-        edt_fullname = findViewById(R.id.EditText_fullname);
-        edt_aadhaarno = findViewById(R.id.EditText_hofbasedaadharnumber);
-        edt_address = findViewById(R.id.EditText_address);
-        edt_mobileno = findViewById(R.id.EditText_mobileno);
-        edt_email = findViewById(R.id.EditText_email);
-        submitbtn = findViewById(R.id.submit);
-        radiogroup_gender = findViewById(R.id.radio_group_gender);
 
-        final String address = edt_address.getText().toString() + " " + edt_housenumber.getText().toString() + " " + edt_street.getText().toString()+" "+
-                          edt_landmark.getText().toString() + " " + edt_area.getText().toString() + " " + edt_village.getText().toString();
 
-        //converting imageview to bitmap
-//        BitmapDrawable drawable = (BitmapDrawable) img.getDrawable();
+     //converting imageview to bitmap
+//        BitmapDrawable drawable = (BitmapDrawable) imageView_applicant.getDrawable();
 //        bitmapImg = drawable.getBitmap();
 
+//         BitmapDrawable drawable = (BitmapDrawable) imageView_applicant.getDrawable();
+//         Bitmap bitmap = drawable.getBitmap();
+//         ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//         bitmap.compress(Bitmap.CompressFormat.PNG, 0 /* Ignored for PNGs */,stream);
+//         byte[] imageInByte = stream.toByteArray();
+//         bitmapImg = BitmapFactory.decodeByteArray(imageInByte, 0, imageInByte.length);
 
-       /* int selectedId = radiogroup_gender.getCheckedRadioButtonId();
-        // find the radiobutton by returned id
-        radiobtn = (RadioButton) findViewById(selectedId);
-        final String gender = (String) radiobtn.getText();
 
-*/
+        //getting the string from radiobtn
+//        int selectedId = radiogroup_gender.getCheckedRadioButtonId();
+//        // find the radiobutton by returned id
+//        radiobtn = (RadioButton) findViewById(selectedId);
+//        final String gender = (String) radiobtn.getText();
+
+
 
 //onclick submit checking validtion and sending data to second activity
         submitbtn.setOnClickListener(new View.OnClickListener() {
@@ -179,6 +188,9 @@ public class MainActivity1 extends AppCompatActivity {
                 final String name = edt_fullname.getText().toString();
                 final String email = edt_email.getText().toString();
                 final String dob = edt_dob.getText().toString();
+                final String address = edt_address.getText().toString() + " " + edt_housenumber.getText().toString() + " " + edt_street.getText().toString()+" "+
+                        edt_landmark.getText().toString() + " " + edt_area.getText().toString() + " " + edt_village.getText().toString();
+
 
                 boolean failFlag = false;
 
@@ -236,7 +248,7 @@ public class MainActivity1 extends AppCompatActivity {
     }
 
 
- //Activity result to capture imag from camera and set in imageview
+ //Activity result to capture image from camera and set in imageview
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
