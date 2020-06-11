@@ -27,30 +27,6 @@ public class AadharData implements Parcelable {
     String gender;
     Bitmap bitmapImage;
 
-    public AadharData(String pEnroll_id, String full_name, String postOffice, String address, String district, String subdistrict, String state, String email, String poa, String poi, String por, String uid, String age, String pincode, String mobile_no, String aadhaar_num, String hof_aadharno, String introducer_name , Bitmap bitmapImage,String gender) {
-        preEnroll_id = pEnroll_id;
-        Full_name = full_name;
-
-        this.postOffice = postOffice;
-        Address = address;
-        this.district = district;
-        this.subdistrict = subdistrict;
-        this.state = state;
-        this.email = email;
-        this.poa = poa;
-        this.poi = poi;
-        this.por = por;
-        this.uid = uid;
-        this.age = age;
-        this.pincode = pincode;
-        this.mobile_no = mobile_no;
-        this.aadhaar_num = aadhaar_num;
-        this.hof_aadharno = hof_aadharno;
-        this.introducer_name = introducer_name;
-        this.bitmapImage = bitmapImage;
-        this.gender = gender;
-
-    }
 
     public AadharData() {
 

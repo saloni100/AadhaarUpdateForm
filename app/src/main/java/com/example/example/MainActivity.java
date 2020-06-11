@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText edt_fullname , edt_email ,edt_mobileno , edt_address,edt_aadhaarno;
     private EditText edt_uid , edt_preEnrollid , edt_housenumber , edt_street , edt_landmark
             ,edt_state ,edt_area , edt_village ,edt_postoffice , edt_introducerName;
-    private EditText edt_district , edt_subdistrict , edt_poi , edt_poa , edt_por , edt_age ,edt_pincode , edt_hofaadharnum;
+    private EditText edt_district , edt_subdistrict , edt_poi , edt_poa , edt_por , edt_age ,edt_pincode ;
     Button submitbtn;
     private RadioGroup radiogroup_gender;
 
@@ -87,35 +87,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final String address = edt_address.getText().toString() + " " + edt_housenumber.getText().toString() + " " + edt_street.getText().toString()+" "+
                 edt_landmark.getText().toString() + " " + edt_area.getText().toString() + " " + edt_village.getText().toString();
 
-//        AadharData data = new AadharData();
-//        data.setAadhaar_num();
-//        data.setAddress();
-//        data.setAge();
-//        data.setBitmapImage();
-//        data.setDistrict();
-//        data.setEmail();
-//        data.setFull_name();
-//        data.setHof_aadharno();
-//        data.setIntroducer_name();
-//        data.setMobile_no();
-//        data.setPincode();
-//        data.setPoa();
-//        data.setPoi();
-//        data.setPor();
-//        data.setPostOffice();
-//        data.setPreEnroll_id();
-//        data.setState();
-//        data.setSubdistrict();
-//        data.setUid();
-//        data.setGender();
-
-
-        AadharData data = new AadharData(edt_preEnrollid.getText().toString(), edt_fullname.getText().toString(), edt_postoffice.getText().toString(),
-                address, edt_district.getText().toString(), edt_subdistrict.getText().toString(),
-                edt_state.getText().toString(), edt_email.getText().toString(), edt_poa.getText().toString(),
-                edt_poi.getText().toString(), edt_por.getText().toString(), edt_uid.getText().toString(), edt_age.getText().toString(),
-                edt_pincode.getText().toString(), edt_mobileno.getText().toString(), edt_aadhaarno.getText().toString(), edt_hofaadharnum.getText().toString(),
-                edt_introducerName.getText().toString(), photo,gender);
+        AadharData data = new AadharData();
+        data.setAadhaar_num(edt_aadhaarno.getText().toString());
+        data.setAddress(address);
+        data.setAge(edt_age.getText().toString());
+        data.setBitmapImage(photo);
+        data.setDistrict(edt_district.getText().toString());
+        data.setEmail(edt_email.getText().toString());
+        data.setFull_name(edt_fullname.getText().toString());
+        data.setHof_aadharno(edt_aadhaarno.getText().toString());
+        data.setIntroducer_name(edt_introducerName.getText().toString());
+        data.setMobile_no(edt_mobileno.getText().toString());
+        data.setPincode(edt_pincode.getText().toString());
+        data.setPoa(edt_poa.getText().toString());
+        data.setPoi(edt_poi.getText().toString());
+        data.setPor(edt_por.getText().toString());
+        data.setPostOffice(edt_postoffice.getText().toString());
+        data.setPreEnroll_id(edt_preEnrollid.getText().toString());
+        data.setState(edt_state.getText().toString());
+        data.setSubdistrict(edt_subdistrict.getText().toString());
+        data.setUid(edt_uid.getText().toString());
+        data.setGender(gender);
         return data;
     }
 
@@ -226,7 +218,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edt_postoffice = findViewById(R.id.EditText_postOffice);
         edt_age = findViewById(R.id.EditText_age);
         edt_pincode = findViewById(R.id.EditText_pincode);
-        edt_hofaadharnum = findViewById(R.id.EditText_hofbasedaadharnumber);
         edt_introducerName = findViewById(R.id.EditText_introducerORhof_name);
         edt_fullname = findViewById(R.id.EditText_fullname);
         edt_address = findViewById(R.id.EditText_address);
