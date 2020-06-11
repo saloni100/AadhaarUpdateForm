@@ -1,5 +1,6 @@
 package com.example.example;
 
+import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -7,12 +8,22 @@ public class AadharData implements Parcelable {
 
     String PreEnroll_id ,Full_name  , postOffice , Address , district , subdistrict , state , email , poa;
       String  poi,por,uid , age,pincode,mobile_no , aadhaar_num , hof_aadharno , introducer_name;
+       Bitmap bitmapImage;
+
+    public Bitmap getBitmapImage() {
+        return bitmapImage;
+    }
+
+    public void setBitmapImage(Bitmap bitmapImage) {
+        this.bitmapImage = bitmapImage;
+    }
+
+
 
 
     protected AadharData(Parcel in) {
         PreEnroll_id = in.readString();
         Full_name = in.readString();
-
         postOffice = in.readString();
         Address = in.readString();
         district = in.readString();
@@ -29,9 +40,12 @@ public class AadharData implements Parcelable {
         aadhaar_num = in.readString();
         hof_aadharno = in.readString();
         introducer_name = in.readString();
+        bitmapImage =  in.readParcelable(Bitmap.class.getClassLoader());
+
+
     }
 
-    public AadharData(String preEnroll_id, String full_name, String postOffice, String address, String district, String subdistrict, String state, String email, String poa, String poi, String por, String uid, String age, String pincode, String mobile_no, String aadhaar_num, String hof_aadharno, String introducer_name) {
+    public AadharData(String preEnroll_id, String full_name, String postOffice, String address, String district, String subdistrict, String state, String email, String poa, String poi, String por, String uid, String age, String pincode, String mobile_no, String aadhaar_num, String hof_aadharno, String introducer_name , Bitmap bitmapImage) {
         PreEnroll_id = preEnroll_id;
         Full_name = full_name;
 
@@ -51,6 +65,8 @@ public class AadharData implements Parcelable {
         this.aadhaar_num = aadhaar_num;
         this.hof_aadharno = hof_aadharno;
         this.introducer_name = introducer_name;
+        this.bitmapImage = bitmapImage;
+
     }
 
 
@@ -75,6 +91,7 @@ public class AadharData implements Parcelable {
         dest.writeString(aadhaar_num);
         dest.writeString(hof_aadharno);
         dest.writeString(introducer_name);
+        dest.writeValue(bitmapImage);
     }
 
     @Override

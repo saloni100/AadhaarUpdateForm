@@ -499,6 +499,14 @@
         android:layout_marginTop="20dp"
         layout="@layout/activity_main3" />
 
+    <include
+        android:id="@+id/include_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_2"
+        android:layout_marginTop="20dp"
+        layout="@layout/activity_main4" />
+
 
 
 </RelativeLayout>

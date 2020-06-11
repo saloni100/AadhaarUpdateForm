@@ -3,15 +3,20 @@ package com.example.example;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -27,6 +32,9 @@ public class MainActivity1 extends AppCompatActivity {
     Button submitbtn;
     RadioGroup radiogroup_gender;
     RadioButton radiobtn;
+    ImageView img;
+    Bitmap bitmapImg;
+
 
 
     @Override
@@ -57,7 +65,9 @@ public class MainActivity1 extends AppCompatActivity {
         edt_hofaadharnum = findViewById(R.id.EditText_hofbasedaadharnumber);
         edt_introducerName = findViewById(R.id.EditText_introducerORhof_name);
 
-
+        img = (ImageView)findViewById(R.id.imageView_sign_applicant);
+        img.buildDrawingCache();
+        bitmapImg = img.getDrawingCache();
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -88,9 +98,9 @@ public class MainActivity1 extends AppCompatActivity {
         edt_address = findViewById(R.id.EditText_address);
         edt_mobileno = findViewById(R.id.EditText_mobileno);
         edt_email = findViewById(R.id.EditText_email);
-
         submitbtn = findViewById(R.id.submit);
         radiogroup_gender = findViewById(R.id.radio_group_gender);
+
         final String address = edt_address.getText().toString() + " " + edt_housenumber.getText().toString() + " " + edt_street.getText().toString()+" "+
                           edt_landmark.getText().toString() + " " + edt_area.getText().toString() + " " + edt_village.getText().toString();
 
@@ -144,7 +154,7 @@ public class MainActivity1 extends AppCompatActivity {
                                                  edt_state.getText().toString() , edt_email.getText().toString() , edt_poa.getText().toString(),
                         edt_poi.getText().toString(), edt_por.getText().toString() , edt_uid.getText().toString() , edt_age.getText().toString(),
                         edt_pincode.getText().toString(), edt_mobileno.getText().toString() , edt_aadhaarno.getText().toString(),edt_hofaadharnum.getText().toString(),
-                        edt_introducerName.getText().toString());
+                        edt_introducerName.getText().toString(),bitmapImg);
 
                 Intent intent = new Intent(MainActivity1.this, SecondActivity.class);
                 intent.putExtra("Deta", data);

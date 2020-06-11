@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,6 +12,7 @@ public class SecondActivity extends AppCompatActivity {
 
     TextView preEnrollId ,  dob , address , fullname , gender , postOffice , district , subdistrict , state , email , pincode , mobileno,
              poi , poa , por , dob_docbased , detailsOf_name , detailsof_aadhaarno;
+    ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +37,14 @@ public class SecondActivity extends AppCompatActivity {
         dob_docbased = findViewById(R.id.dob_docbased);
         detailsOf_name = findViewById(R.id.name);
         detailsof_aadhaarno = findViewById(R.id.AadhaarNo);
+        img = findViewById(R.id.imageView);
 
         //collect our intent
           Intent intent = getIntent();
         AadharData data = intent.getParcelableExtra("Deta");
          Toast.makeText(this,data.getFull_name(),Toast.LENGTH_LONG).show();
+          img.setImageBitmap(data.getBitmapImage());
+
 
 
         String PreEnroll_id  = data.getPreEnroll_id();

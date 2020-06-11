@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/imageView_introducerorhof_name"
-        android:layout_width="@dimen/drawableWidth"
-        android:layout_height="@dimen/drawableHeight"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:layout_toRightOf="@id/sign_verifier"
         android:layout_marginLeft="@dimen/leftmargin_edt"
         android:layout_marginTop="10dp"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/textsize_2"
         android:textStyle="bold"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="55dp"
         android:layout_below="@id/sign_hofORintroducer"
         android:textColor="@color/black"
         android:layout_marginLeft="@dimen/leftmargin"
@@ -62,8 +62,8 @@
 
     <ImageView
         android:id="@+id/imageView_sign_applicant"
-        android:layout_width="@dimen/drawableWidth"
-        android:layout_height="@dimen/drawableHeight"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:layout_toRightOf="@id/sign_applicant"
         android:layout_below="@id/Note_sign"
         android:layout_marginLeft="@dimen/leftmargin_edt"
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/textsize"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:layout_below="@id/sign_applicant"
         android:textColor="@color/black"
         android:layout_marginLeft="@dimen/leftmargin"
@@ -86,8 +86,8 @@
 
     <ImageView
         android:id="@+id/imageView_sign_verifier"
-        android:layout_width="@dimen/drawableWidth"
-        android:layout_height="@dimen/drawableHeight"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:layout_below="@id/imageView_sign_applicant"
         android:layout_toRightOf="@id/sign_verifier"
         android:layout_marginLeft="@dimen/leftmargin_edt"
@@ -102,8 +102,8 @@
         android:textColor="@color/black"
         android:textSize="@dimen/textsize_btn"
         android:layout_below="@id/sign_verifier"
-        android:layout_marginTop="60dp"
-        android:background="@color/darkgreen"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorAccent"
         />
 
 </RelativeLayout>
