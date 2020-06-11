@@ -4,11 +4,10 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -30,24 +29,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView tv_dob;
     private EditText edt_dob;
-    DatePickerDialog.OnDateSetListener setListener;
     EditText edt_fullname , edt_email ,edt_mobileno , edt_address,edt_aadhaarno;
-    private EditText edt_uid , edt_preEnrollid , edt_housenumber , edt_street , edt_landmark ,edt_state ,edt_area , edt_village ,edt_postoffice , edt_introducerName;
-    private EditText edt_district , edt_subdistrict , edt_poi , edt_poa , edt_por , edt_dobdocbased , edt_age ,edt_pincode , edt_hofaadharnum;
+    private EditText edt_uid , edt_preEnrollid , edt_housenumber , edt_street , edt_landmark
+            ,edt_state ,edt_area , edt_village ,edt_postoffice , edt_introducerName;
+    private EditText edt_district , edt_subdistrict , edt_poi , edt_poa , edt_por , edt_age ,edt_pincode , edt_hofaadharnum;
     Button submitbtn;
     private RadioGroup radiogroup_gender;
-    private RadioButton radiobtn;
-    Bitmap bitmapImg;
 
     TextView  tv_sign_verifier;
     TextView  tv_sign_applicant;
     private ImageView imageView_applicant;
     Bitmap photo;
-    Drawable drawable;
     private static final int RESULT_LOAD_IMAGE = 1;
-    private static final String TAG = "myactivity";
     private static final int pic_id = 123;
     private String gender="";
+    private ImageView img_sign_verifier;
 
 
     @Override
@@ -56,25 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main1);
         initView();
         setClickListeners();
-        //converting imageview to bitmap
-//        BitmapDrawable drawable = (BitmapDrawable) imageView_applicant.getDrawable();
-//        bitmapImg = drawable.getBitmap();
-
-//         BitmapDrawable drawable = (BitmapDrawable) imageView_applicant.getDrawable();
-//         Bitmap bitmap = drawable.getBitmap();
-//         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//         bitmap.compress(Bitmap.CompressFormat.PNG, 0 /* Ignored for PNGs */,stream);
-//         byte[] imageInByte = stream.toByteArray();
-//         bitmapImg = BitmapFactory.decodeByteArray(imageInByte, 0, imageInByte.length);
-
-
-        //getting the string from radiobtn
-//        int selectedId = radiogroup_gender.getCheckedRadioButtonId();
-//        // find the radiobutton by returned id
-//        radiobtn = (RadioButton) findViewById(selectedId);
-//        final String gender = (String) radiobtn.getText();
-
-
     }
 
     private void setClickListeners() {
@@ -95,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.submit : if(!validateData()){
                 AadharData data = setData();
                 startNewActivity(data);
-            };break;
+            }break;
 
         }
     }
@@ -191,20 +168,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void galleryPick() {
-        Intent i = new Intent(
-                Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i, RESULT_LOAD_IMAGE);
     }
 
     private void cameraPick() {
-        // Create the camera_intent ACTION_IMAGE_CAPTURE
-        // it will open the camera for capture the image
-        Intent camera_intent
-                = new Intent(MediaStore
-                .ACTION_IMAGE_CAPTURE);
-        // Start the activity with camera_intent,
-        // and request pic id
+        Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(camera_intent, pic_id);
     }
 
@@ -223,8 +192,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 edt_dob.setText(date);
             }
         },year,month,day);
-        //edt_dob set tag(1)
-        //edt .get tag == null //error in parceble
         datePickerDialog.show();
     }
 
@@ -236,8 +203,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(radioButton !=null){
             gender =radioButton.getText().toString();
-            // Now display the value of selected item
-            // by the Toast message
         }
 
     }
@@ -252,7 +217,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edt_poi = findViewById(R.id.EditText_poi);
         edt_poa = findViewById(R.id.EditText_poa);
         edt_por = findViewById(R.id.EditText_por);
-        edt_dobdocbased = findViewById(R.id.EditText_docBased);
         edt_housenumber = findViewById(R.id.EditText_houseNumber);
         edt_street = findViewById(R.id.EditText_street);
         edt_landmark = findViewById(R.id.EditText_landmark);
@@ -264,36 +228,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edt_pincode = findViewById(R.id.EditText_pincode);
         edt_hofaadharnum = findViewById(R.id.EditText_hofbasedaadharnumber);
         edt_introducerName = findViewById(R.id.EditText_introducerORhof_name);
-
         edt_fullname = findViewById(R.id.EditText_fullname);
-        edt_aadhaarno = findViewById(R.id.EditText_hofbasedaadharnumber);
         edt_address = findViewById(R.id.EditText_address);
         edt_mobileno = findViewById(R.id.EditText_mobileno);
         edt_email = findViewById(R.id.EditText_email);
         submitbtn = findViewById(R.id.submit);
         radiogroup_gender = findViewById(R.id.radio_group_gender);
-
-
+        img_sign_verifier = (ImageView) findViewById(R.id.imageView_sign_verifier);
         tv_sign_verifier = findViewById(R.id.sign_verifier);
         tv_sign_applicant = findViewById(R.id.sign_applicant);
         imageView_applicant = (ImageView)this.findViewById(R.id.imageView_sign_applicant);
-
-
     }
 
 
-    //Activity result to capture image from camera and set in imageview
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK && null != data){
             switch (requestCode){
-                case pic_id :// BitMap is data structure of image file
-                    // which stor the image in memory
-                    photo = (Bitmap)data.getExtras()
-                            .get("data");
-
-                    // Set the image in imageview for display
+                case pic_id : photo = (Bitmap)data.getExtras().get("data");
                     imageView_applicant.setImageBitmap(photo);
                     break;
 
@@ -304,14 +257,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     cursor.moveToFirst();
                     int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                     String picturePath = cursor.getString(columnIndex);
-                    Log.i("cursor_data",picturePath);
                     cursor.close();
-                    ImageView img_sign_verifier = (ImageView) findViewById(R.id.imageView_sign_verifier);
                     File imgFile = new File(picturePath);
-                    // Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-                    img_sign_verifier.setImageURI(Uri.fromFile(imgFile));
-                    // img_sign_verifier.setImageBitmap(myBitmap);
+                    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                    // img_sign_verifier.setImageURI(Uri.fromFile(imgFile));
+                    img_sign_verifier.setImageBitmap(myBitmap);
                     break;
+                default: break;
             }
         }
     }
