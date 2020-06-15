@@ -78,12 +78,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void startNewActivity(AadharData data) {
-        Intent intent = new Intent(MainActivity.this, ImageActivity.class);
+        Intent intent = new Intent(MainActivity.this, FormActivity.class);
         intent.putExtra("Deta", data);
         startActivity(intent);
     }
 
-    private AadharData setData() {
+    private AadharData
+
+    setData() {
         final String address = edt_address.getText().toString() + " " + edt_housenumber.getText().toString() + " " + edt_street.getText().toString()+" "+
                 edt_landmark.getText().toString() + " " + edt_area.getText().toString() + " " + edt_village.getText().toString();
 
