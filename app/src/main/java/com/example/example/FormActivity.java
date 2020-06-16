@@ -1,5 +1,6 @@
 package com.example.example;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class FormActivity extends AppCompatActivity {
 
     TextView Fullname;
-    //  TextView Age;
+     TextView Age;
     TextView uid;
     TextView address;
     TextView mobilenumber;
@@ -34,7 +35,7 @@ public class FormActivity extends AppCompatActivity {
 
 
         Fullname = findViewById(R.id.fullname);
-        //  age = findViewById(R.id.Age);
+        Age= findViewById(R.id.Age);
         mobilenumber = findViewById(R.id.mobileNumber);
         gender = findViewById(R.id.Gender);
         uid = findViewById(R.id.Uid);
@@ -45,25 +46,28 @@ public class FormActivity extends AppCompatActivity {
         image = findViewById(R.id.image);
         btn = findViewById(R.id.download_btn);
 
-//        Intent intent = getIntent();
-//        final AadharData data = intent.getParcelableExtra("Deta");
+
+        Intent intent = getIntent();
+        final AadharData data = intent.getParcelableExtra("Deta");
+
 
 
         //Test data . Remove this code
-        final AadharData data = new AadharData();
-        data.setFull_name("test");
-        data.setUid("dsddsdfffdfsd");
-        data.setMobile_no("dddddd");
-        data.setPincode("fffdfsd");
-        data.setAadhaar_num("fffdfsd");
-        data.setAddress("fffdfsd");
-        data.setGender("fffdfsd");
-        data.setEmail("fffdfsd");
-        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.face);
-        data.setBitmapImage(bitmap);
+//        data.setFull_name("test");
+//        data.setUid("dsddsdfffdfsd");
+//        data.setMobile_no("dddddd");
+//        data.setPincode("fffdfsd");
+//        data.setAadhaar_num("fffdfsd");
+//        data.setAddress("fffdfsd");
+//        data.setGender("fffdfsd");
+//        data.setEmail("fffdfsd");
+//        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.face);
+//        data.setBitmapImage(bitmap);
+//
 
         if (data != null) {
             Fullname.setText("FullName : " + data.getFull_name());
+            Age.setText("Age : "+data.getAge());
             uid.setText("UID :" + data.getUid());
             mobilenumber.setText("Mobile Number :" + data.getMobile_no());
             pincode.setText("Pincode : " + data.getPincode());

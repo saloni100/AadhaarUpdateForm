@@ -5,6 +5,7 @@ import android.os.Environment;
 import android.text.TextUtils;
 
 import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
@@ -39,9 +40,7 @@ public class PdfHelper {
                 PdfWriter.getInstance(document, new FileOutputStream(FILE));
                 // Open Document for Writting into document
                 document.open();
-                Paragraph pr = new Paragraph();
-                pr.add("This is a pdf document");
-                document.add(pr);
+
                 //     User Define Method
                 addMetaData(document);
                 addTitlePage(document,data);
@@ -82,11 +81,16 @@ public class PdfHelper {
         // Add item into Paragraph
         prHead.add("Aadhaar Update Form\n");
         prHead.setAlignment(Element.ALIGN_CENTER);
+        document.add(prHead);
+
+        document.add( Chunk.NEWLINE );
 
         Paragraph SubHead = new Paragraph();
-        prHead.setFont(catFont);
-        prHead.add("Personal Details\n");
+        SubHead.setFont(catFont);
+        SubHead.add("Personal Details\n");
         SubHead.setAlignment(Element.ALIGN_CENTER);
+        document.add(SubHead);
+        document.add( Chunk.NEWLINE );
 
         String fullname = data.getFull_name();
         String uid = data.getUid();
@@ -97,21 +101,14 @@ public class PdfHelper {
         String email = data.getEmail();
         String pincode = data.getPincode();
         Bitmap image = data.getBitmapImage();
-        if(image!=null){
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            image.compress(Bitmap.CompressFormat.PNG, 50, stream);
-            try {
-                Image image1 = Image.getInstance(stream.toByteArray());
-                document.add(image1);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+
+
 
         // Create Table into Document with 1 Row
         PdfPTable myTable = new PdfPTable(2);
         // 100.0f mean width of table is same as Document size
         myTable.setWidthPercentage(100.0f);
+
 
         // Create cells
         PdfPCell cell1 = new PdfPCell(new Paragraph("Full Name", smallBold));
@@ -130,6 +127,7 @@ public class PdfHelper {
         PdfPCell cell16 = new PdfPCell(new Paragraph(address, smallBold));
         PdfPCell cell17 = new PdfPCell(new Paragraph("Pincode", smallBold));
         PdfPCell cell18 = new PdfPCell(new Paragraph(pincode, smallBold));
+        PdfPCell cell19 = new PdfPCell(new Paragraph("Applicant Signature", smallBold));
 
         // Add cells in table
         myTable.addCell(cell1);
@@ -148,6 +146,25 @@ public class PdfHelper {
         myTable.addCell(cell16);
         myTable.addCell(cell17);
         myTable.addCell(cell18);
+        myTable.addCell(cell19);
+
+
+        if(image!=null){
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            image.compress(Bitmap.CompressFormat.PNG, 50, stream);
+            try {
+                 Image image1 = Image.getInstance(stream.toByteArray());
+                image1.scaleAbsolute(200f, 200f);
+               // image1.scalePercent(10);
+                //cell20.addElement(new Chunk(image1, 5, -5));
+                PdfPCell cell20 = new PdfPCell(image1);
+                myTable.addCell(cell20);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         document.add(myTable);
 
     }
