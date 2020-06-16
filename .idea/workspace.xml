@@ -6,14 +6,12 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6613556a-5b6d-4d7f-8f80-c5081b562461" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/example/FormActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/example/PdfHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/face.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -25,19 +23,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____app_libs_barcodes_7_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____app_libs_io_7_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____app_libs_io_7_1_3_javadoc_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/example/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/example/PdfActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/example/SecondActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_second.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/example/FormActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/example/FormActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/example/PdfHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/example/PdfHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +35,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="c06150c3" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="13e202c" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -95,7 +85,7 @@
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/androidTest/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Build Variants" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -115,6 +105,7 @@
       <recent name="com.example.example" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
@@ -321,26 +312,26 @@
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591596287564" />
     <state x="695" y="204" width="530" height="633" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1591952078085" />
-    <state width="1323" height="404" key="GridCell.Tab.0.bottom" timestamp="1592218394465">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1797" height="450" key="GridCell.Tab.0.bottom" timestamp="1592295226676">
+      <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1323" height="404" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592218394465" />
-    <state width="1797" height="327" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1591874421909" />
-    <state width="1323" height="404" key="GridCell.Tab.0.center" timestamp="1592218394465">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1797" height="450" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1592295226676" />
+    <state width="1797" height="450" key="GridCell.Tab.0.center" timestamp="1592295226674">
+      <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1323" height="404" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592218394465" />
-    <state width="1797" height="327" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1591874421908" />
-    <state width="1323" height="404" key="GridCell.Tab.0.left" timestamp="1592218394465">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1797" height="450" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1592295226674" />
+    <state width="1797" height="450" key="GridCell.Tab.0.left" timestamp="1592295226672">
+      <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1323" height="404" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592218394465" />
-    <state width="1797" height="327" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1591874421908" />
-    <state width="1323" height="404" key="GridCell.Tab.0.right" timestamp="1592218394465">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1797" height="450" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1592295226672" />
+    <state width="1797" height="450" key="GridCell.Tab.0.right" timestamp="1592295226675">
+      <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1323" height="404" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592218394465" />
-    <state width="1797" height="327" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1591874421909" />
+    <state width="1797" height="450" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1592295226675" />
     <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1592218390244">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -377,11 +368,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1592209876324" />
-    <state x="74" y="70" width="1219" height="591" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591953152925">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="167" y="134" width="1653" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592294989730">
+      <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="74" y="70" width="1219" height="591" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591953152925" />
-    <state x="167" y="134" width="1653" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1591876388864" />
+    <state x="167" y="134" width="1653" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1592294989730" />
     <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1592196557100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

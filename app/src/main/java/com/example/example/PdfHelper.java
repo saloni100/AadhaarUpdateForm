@@ -1,9 +1,8 @@
 package com.example.example;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Environment;
-import android.widget.Toast;
+import android.text.TextUtils;
 
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
@@ -13,7 +12,6 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -24,52 +22,43 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
-
 public class PdfHelper {
 
     public void createPdf( AadharData data){
-        String FILE = Environment.getExternalStorageDirectory().toString()
-                + "/PDF/" + "Name.pdf";
-
-        // Create New Blank Document
-        Document document = new Document(PageSize.A4);
-
-     // Create Directory in External Storage
-        String root = Environment.getExternalStorageDirectory().toString();
-        File myDir = new File(root + "/PDF");
-        myDir.mkdirs();
-
-
-        // Create Pdf Writer for Writting into New Created Document
-        try {
-            PdfWriter.getInstance(document, new FileOutputStream(FILE));
-
-            // Open Document for Writting into document
-            document.open();
-            Paragraph pr = new Paragraph();
-            pr.add("This is a pdf document");
-            document.add(pr);
-
-        //     User Define Method
-            addMetaData(document);
-            addTitlePage(document,data);
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        if(data!=null && !TextUtils.isEmpty(data.getFull_name())){
+            String FILE = Environment.getExternalStorageDirectory().toString()
+                    + "/PDF/" + data.getFull_name()+".pdf";
+            // Create New Blank Document
+            Document document = new Document(PageSize.A4);
+            // Create Directory in External Storage
+            String root = Environment.getExternalStorageDirectory().toString();
+            File myDir = new File(root + "/PDF");
+            myDir.mkdirs();
+            // Create Pdf Writer for Writting into New Created Document
+            try {
+                PdfWriter.getInstance(document, new FileOutputStream(FILE));
+                // Open Document for Writting into document
+                document.open();
+                Paragraph pr = new Paragraph();
+                pr.add("This is a pdf document");
+                document.add(pr);
+                //     User Define Method
+                addMetaData(document);
+                addTitlePage(document,data);
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (DocumentException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            document.close();
         }
 
-//        Toast.makeText(this, "PDF File is Created. Location : " + FILE,
-//                Toast.LENGTH_LONG).show();
-        document.close();
     }
 
     // Set PDF document Properties
     public void addMetaData(Document document)
-
     {
         document.addTitle("Aadhaar Update Form");
         document.addSubject("Person Info");
@@ -100,7 +89,6 @@ public class PdfHelper {
         SubHead.setAlignment(Element.ALIGN_CENTER);
 
         String fullname = data.getFull_name();
-        String age = data.getAge();
         String uid = data.getUid();
         String mobileNumber = data.getMobile_no();
         String AadharNumber = data.getAadhaar_num();
@@ -109,17 +97,16 @@ public class PdfHelper {
         String email = data.getEmail();
         String pincode = data.getPincode();
         Bitmap image = data.getBitmapImage();
-
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        image.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        try {
-            Image image1 = Image.getInstance(stream.toByteArray());
-            document.add(image1);
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(image!=null){
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            image.compress(Bitmap.CompressFormat.PNG, 50, stream);
+            try {
+                Image image1 = Image.getInstance(stream.toByteArray());
+                document.add(image1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
 
         // Create Table into Document with 1 Row
         PdfPTable myTable = new PdfPTable(2);
@@ -129,8 +116,6 @@ public class PdfHelper {
         // Create cells
         PdfPCell cell1 = new PdfPCell(new Paragraph("Full Name", smallBold));
         PdfPCell cell2 = new PdfPCell(new Paragraph(fullname, smallBold));
-        PdfPCell cell3 = new PdfPCell(new Paragraph("Age", smallBold));
-        PdfPCell cell4 = new PdfPCell(new Paragraph(age, smallBold));
         PdfPCell cell5 = new PdfPCell(new Paragraph("Email", smallBold));
         PdfPCell cell6 = new PdfPCell(new Paragraph(email, smallBold));
         PdfPCell cell7 = new PdfPCell(new Paragraph("Gender", smallBold));
@@ -146,12 +131,9 @@ public class PdfHelper {
         PdfPCell cell17 = new PdfPCell(new Paragraph("Pincode", smallBold));
         PdfPCell cell18 = new PdfPCell(new Paragraph(pincode, smallBold));
 
-
         // Add cells in table
         myTable.addCell(cell1);
         myTable.addCell(cell2);
-        myTable.addCell(cell3);
-        myTable.addCell(cell4);
         myTable.addCell(cell5);
         myTable.addCell(cell6);
         myTable.addCell(cell7);

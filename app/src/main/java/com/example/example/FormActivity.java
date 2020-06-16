@@ -1,19 +1,14 @@
 package com.example.example;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.media.Image;
-import android.os.Build;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class FormActivity extends AppCompatActivity {
 
@@ -50,15 +45,25 @@ public class FormActivity extends AppCompatActivity {
         image = findViewById(R.id.image);
         btn = findViewById(R.id.download_btn);
 
+//        Intent intent = getIntent();
+//        final AadharData data = intent.getParcelableExtra("Deta");
 
-        //collect our intent
-        Intent intent = getIntent();
-        final AadharData data = intent.getParcelableExtra("Deta");
-        Bitmap Image = data.getBitmapImage();
+
+        //Test data . Remove this code
+        final AadharData data = new AadharData();
+        data.setFull_name("test");
+        data.setUid("dsddsdfffdfsd");
+        data.setMobile_no("dddddd");
+        data.setPincode("fffdfsd");
+        data.setAadhaar_num("fffdfsd");
+        data.setAddress("fffdfsd");
+        data.setGender("fffdfsd");
+        data.setEmail("fffdfsd");
+        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.face);
+        data.setBitmapImage(bitmap);
 
         if (data != null) {
             Fullname.setText("FullName : " + data.getFull_name());
-            //  Age.setText("Age :"+age);
             uid.setText("UID :" + data.getUid());
             mobilenumber.setText("Mobile Number :" + data.getMobile_no());
             pincode.setText("Pincode : " + data.getPincode());
@@ -66,14 +71,13 @@ public class FormActivity extends AppCompatActivity {
             address.setText("Address :" + data.getAddress());
             gender.setText("Gender :" + data.getGender());
             email.setText("Email : " + data.getEmail());
-
-
             image.setImageBitmap(data.getBitmapImage());
         }
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                objectpdf.createPdf(data);
+                if(data!=null)
+                    objectpdf.createPdf(data);
 
             }
         });
@@ -81,4 +85,4 @@ public class FormActivity extends AppCompatActivity {
     }
 
 
-    }
+}
